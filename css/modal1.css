@@ -1,0 +1,137 @@
+
+.bg-modal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    display: none;
+}
+
+.modal{
+    width: 25%;
+    height: 30%;
+    background: #fff;
+    /* border-radius: 15px; */
+    margin: 80px auto 0 auto;
+}
+
+.modal span{
+    display: block;
+    font-size: 30px;
+    color: rgb(201, 201, 201);
+    transition: 350ms;
+    cursor: pointer;
+}
+
+.modal span:hover{
+    color: #0f99da;
+    transition: 350ms;
+}
+
+.bar-modal{
+    width: 100%;
+    display: flex;
+    height: 20%;
+    background: rgb(68, 68, 68);
+    justify-content: space-between;
+    align-items: center;
+    /* border-top-left-radius: 13px;
+    border-top-right-radius: 13px; */
+    padding: 0 20px;
+}
+.bar-modal > h1{
+    color: rgb(221, 221, 221);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-box{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+.modal-input,
+select{
+    width: 100%;
+    height: 12%;
+    border: none;
+    margin-bottom: 10px;
+    /* border-radius: 5px; */
+    margin-top: 10px;
+    background: rgba(107, 107, 107, 0.438);
+    padding-left: 10px;
+}
+
+select{
+    margin-bottom: 10px;
+}
+.boxbtn{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-form{
+    background: rgb(139, 139, 139);
+    border: none;
+    width: 40%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-right: 4px;
+    transition: .5s;
+    border-radius: 4px;
+}
+.btn-form:hover{
+    background: rgb(99, 99, 99);
+}
+
+
+@media (max-width: 1030px){
+    .modal{
+        width: 35%;
+        height: 30%;
+        background: #fff;
+        /* border-radius: 15px; */
+        margin: 80px auto 0 auto;
+    }
+    
+}
+
+@media (max-width: 870px){
+    .modal{
+        width: 40%;
+        height: 30%;
+        background: #fff;
+        /* border-radius: 15px; */
+        margin: 80px auto 0 auto;
+    }
+}
+
+@media (max-width: 765px){
+    .modal{
+        width: 50%;
+        height: 30%;
+        background: #fff;
+        /* border-radius: 15px; */
+        margin: 80px auto 0 auto;
+    }
+}
+
+@media (max-width: 570px){
+    .modal{
+        width: 80%;
+        height: 30%;
+        background: #fff;
+        /* border-radius: 15px; */
+        margin: 80px auto 0 auto;
+    }
+}

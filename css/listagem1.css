@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgb(190, 190, 190), #fff);
+    overflow: hidden;
+}
+
+.container:before{
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    z-index: 6;
+}
+
+.forms-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.signin-signup{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5rem;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+form.sign-in-form{
+    z-index: 2;
+}
+
+form.sign-up-form{
+    z-index: 1;
+    opacity: 0;
+}
+
+.title{
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.input-field{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 .4rem;
+    /* box-shadow: inset 0 0 15px rgb(179, 179, 179); */
+}
+
+.input-field i{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    font-size: 1.1rem;
+}
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    overflow: hidden;
+}
+
+.input-field input::placeholder{
+    color: #aaa;
+    font-weight: 500;
+}
+
+.btn{
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #5995fd;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 20px 0 5px 0;
+    transition: .5s;
+}
+
+.btn:hover{
+    background-color: #4d84e2;
+}
+
+.social-text{
+    padding: .7rem 0;
+    font-size: 1rem;
+}
+
+.social-media{
+    display:flex;
+    justify-content: center;
+}
+
+.social-icon{
+    height: 46px;
+    width: 46px;
+    border: 1px solid #333;
+    margin: 0 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    border-radius: 50%;
+}
+
+.social-icon:hover{
+    color: #4481eb;
+    border-color: #4481eb;
+}
+
+.panels-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 7;
+}
+
+.left-panel{
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+    display: flex;
+    align-items: center;
+}
+
+.right-panel{
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+    display: flex;
+    align-items: center;
+}
+
+.panel .content{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 42vh;
+    top: 8%;
+    position: absolute;
+}
+
+.panel h3{
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.panel p{
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.btn.transparent{
+    margin: 5px 0;
+    border: 2px solid #fff;
+    width: 200px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.btn.transparent:hover{
+    background: white;
+    color: #444;
+}
+
+.image{
+    position: absolute;
+    bottom: 16%;
+    left: 15%;
+    width: 15%;
+}
+
+.right-panel .content, .right-panel .image{
+    transform: translateX(800px);
+}
+
+
+.text-vaga{
+    z-index: 5;
+    color: rgb(255, 255, 255);
+}
+
+.box-table{
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    z-index: 998;
+}
+  
+tbody{
+    color: #555;
+}
+
+thead > tr > td, td {
+    text-align: center;
+    padding: 10px 20px;
+}
+  
+tr:nth-child(even){
+    background-color: #e6e6e6;
+    color: rgb(58, 58, 58);
+
+}
+  
+thead > tr > td {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.title-print{
+    display: none;
+}
+
+.btn-ativo{
+    background: white;
+    color: #222;
+}
+
+@media (max-width: 870px){
+    .container{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .container:before{
+        width: 1500px;
+        height: 1500px;
+        left: 30%;
+        bottom: 68%;
+        transform: translateX(-50%);
+        right: initial;
+        top: initial;
+    }
+    .image{
+        display: none;
+    }
+    .panel{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
+    .panel .content{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .box-table{
+        width: 85vw;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        overflow: scroll;
+        top: 25vh;
+        position: absolute;
+        left: 7.5%;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background: white;
+        z-index: 998;
+
+    }
+    .text-vaga{
+        width: 100%;
+        font-size: 15px;
+
+    }
+    .logout{
+        margin: 5px 0;
+        width: 200px;
+    }
+}
+
+@media (max-width: 640px){
+    form{
+        padding: 0 1.5rem;
+    }
+
+    .image{
+        display: none;
+    }
+    .panel{
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container:before{
+        bottom: 72%;
+        left: 50%;
+    }
+
+    .box-table{
+        height: 65vh;
+        top: 30vh;
+    }
+
+    .panel .content{
+        width: 100%;
+        height: 20vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .btn.transparent {
+        width: 30%;
+        height: 35px;
+        font-size: 0.55rem;
+        margin: 5px;
+    }
+
+    .logout{
+        width: 30%;
+        margin: 5px;
+    }
+    .text-vaga{
+        width: 100%;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-width: 380px){
+    .box-table{
+        height: 55vh;
+        top: 35%;
+        font-size: .9rem;
+    }
+}
+@media (max-width: 320px){
+    .btn.transparent{
+        width: 30%;
+    }
+    .logout{
+        width: 30%;
+        font-size: .9rem;
+    }
+    .box-table{
+        height: 55vh;
+        top: 40%;
+        font-size: .9rem;
+    }
+    
+}
+
+@media print{
+    body{
+        padding-top: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 100vw;
+        overflow: visible;
+        transform: scale(1.44);
+    }
+    .print{
+        display: none;
+    }
+
+    .box-table{
+        overflow: visible;
+    }
+
+    .box-table{
+        position: absolute;
+        top: 5%;
+    }
+    .title-print{
+        display: block;
+        color: #222;
+        position: absolute;
+        top: 5%;
+        z-index: 999;
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100vw;
+    }
+}
